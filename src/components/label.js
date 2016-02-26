@@ -1,6 +1,7 @@
 import { bindable, customAttribute } from 'aurelia-templating';
 import { inject } from 'aurelia-dependency-injection';
 import {AttributeManager} from '../common/attributeManager';
+import {getBooleanValue} from '../common/attributes';
 
 @customAttribute('sui-label')
 @inject(Element)
@@ -14,9 +15,7 @@ export class Label {
 
   attached() {
     this.size = this.size || "large";
-
-    console.log("Hello I am checking..", this.size, this.basic);
-    this.basic = this.getBoolean(this.basic);
+    this.basic = getBooleanValue(this.basic);
     let classes = ['ui', 'label', this.size];
     if(this.basic) {
       classes.push("basic");
@@ -26,9 +25,5 @@ export class Label {
 
   detached() {
     this.attributeManager.removeClasses(['ui','label']);
-  }
-
-  getBoolean(value) {
-    return (value === true || value === "true");
   }
 }
