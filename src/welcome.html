@@ -3,5 +3,12 @@
     <div sui-label="basic: true;">Hello World</div>
     <a sui-label="size:big">Another Label</a>
     <label sui-label="size:massive">Actual Label</label>
+    <br/>
+    <sui-switch mode="slider" checked.bind="checked" label-text="Hello World"></sui-switch>
+    <sui-switch mode="toggle" checked.bind="checked" label-text="Hello World"></sui-switch>
+
+    <button click.trigger="submit()">Click me</button>
+    <br/>
+    <button click.trigger="anotherSubmit()">Another Click me</button>
   </section>
 </template>

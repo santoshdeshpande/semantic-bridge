@@ -5,6 +5,7 @@ export class Welcome {
   firstName = 'John';
   lastName = 'Doe';
   previousValue = this.fullName;
+  checked = true;
 
   //Getters can't be directly observed, so they must be dirty checked.
   //However, if you tell Aurelia the dependencies, it no longer needs to dirty check the property.
@@ -17,7 +18,10 @@ export class Welcome {
 
   submit() {
     this.previousValue = this.fullName;
-    alert(`Welcome, ${this.fullName}!`);
+  }
+
+  anotherSubmit() {
+    this.checked = !this.checked;
   }
 
   canDeactivate() {
