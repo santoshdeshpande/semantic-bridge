@@ -1,8 +1,15 @@
 language: node_js
+sudo: required
+before_install:
+  - npm install -g jspm
+  - jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
+after_install:
+  - jspm install
 node_js:
-  - '0.10'
-  - '0.12'
-  - 'iojs'
+- 5.4.0
 branches:
   only:
-    - develop
+  - develop
+env:
+  global:
+    secure: cwmHJSnSFvXKOO/oczZ68qP/7cpLUgv6Y1TskeSlcBGUNe9z1CrE+3UdZQEbA26WgcPcdtaE2bRfdfu6B9Y/koFK3QeQZXpZVfN5vcK9iXKbEoslA7T6khkiHaTl3A8ztNCOUpii8ZP3TQNIHUrUVOvWI63R2Rrom77T/k+Vu+XGXOfUsrGaCV6FQn9fNXA5Et/gH1/VMQGZrdOGjsmapQrwf5xehQ94OxEB47VTvfUo3/m7fL+J63vJvehu+VdWvCmgDznD/+7jAdKIcPx9oplEPu9eRhdGbBlr3IJ+HnXO9OMXofWYo2KfCWCRkPPNx5nELIAzDAgB0u8YdAQc7abXIpj3a09jwjQUMenBKNvhguYSLCUUIvt2TW3/SOBJ5bKF4jHU5NvrEWrPRvhmwaGAvzwqMCM879eP+kWHJYveSF5FIH+jQkQRgVtjDRFdfHkk3Pzh+LR7yUgaYdnC5pbPoIMmkSpR8p6rKC34ARfkTzdFlLrZ9zMxyH5oqcCcRi+ns9hsGvDak80j0DWjBt62tICg9VPI7fPUOL98Wg/I8MUm4B7FMGeUKZe4ZNJc8SSJl7+zf040POF4rHWY/GWj18Hy99UElDk7UIF/yLvr+Zq1Mtanqkbc8XvphKLrWZCoLaCJbGX1djIO9Hy+46cf27q6pH1xKE15T588z3w=
