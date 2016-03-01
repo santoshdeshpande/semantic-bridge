@@ -1,8 +1,8 @@
 import { bindable, customElement } from 'aurelia-templating';
 import { bindingMode } from 'aurelia-binding';
 import { inject } from 'aurelia-dependency-injection';
-import {AttributeManager} from 'common/attributeManager';
-import {getBooleanValue} from 'common/attributes';
+import {AttributeManager} from '../../common/attributeManager';
+import {getBooleanValue} from '../../common/attributes';
 
 @customElement("sui-switch")
 @inject(Element)

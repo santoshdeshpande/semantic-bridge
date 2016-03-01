@@ -1,7 +1,7 @@
 import { bindable, customAttribute } from 'aurelia-templating';
 import { inject } from 'aurelia-dependency-injection';
-import {AttributeManager} from 'common/attributeManager';
-import {getBooleanValue} from 'common/attributes';
+import {AttributeManager} from '../../common/attributeManager';
+import {getBooleanValue} from '../../common/attributes';
 
 @customAttribute('sui-label')
 @inject(Element)
