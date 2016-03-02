@@ -1,5 +1,4 @@
 import {Switch as Widget} from 'src/components/switch/switch';
-import {initialize} from 'aurelia-pal-browser';
 import {DOM} from 'aurelia-pal';
 import {Container} from 'aurelia-dependency-injection';
 import {TemplatingEngine} from 'aurelia-templating';
@@ -13,7 +12,6 @@ describe("Switch", () => {
     let bindingEngine;
 
     beforeEach(() => {
-        initialize();
         container = new Container();
         element = DOM.createElement("div");
         container.registerInstance(DOM.Element, element);
