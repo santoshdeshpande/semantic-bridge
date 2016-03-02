@@ -1,11 +1,11 @@
 import {Label} from 'src/components/label/label'
-import {initialize} from 'aurelia-pal-browser';
+// import {initialize} from 'aurelia-pal-browser';
 
 describe("Label", () => {
 	let element;
 	let label;
 	beforeEach(() => {
-		initialize();
+		// initialize();
 		element = document.createElement("a");
 		document.body.appendChild(element);
 		label = new Label(element);

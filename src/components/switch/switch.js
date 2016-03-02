@@ -23,12 +23,13 @@ export class Switch {
 	constructor(element) {
 		this.element = element;
 		this.controlId = `sui-switch-${Switch.id++}`;
-		
+
 	}
 
 	attached() {
 		let classes = ["ui", "checkbox"];
 		let checkboxEl = $(this.checkbox);
+		console.log("What is with the checkbox? ",this.checkbox);
 		this.attributeManager = new AttributeManager(this.checkbox);
 
 		this.checked = getBooleanValue(this.checked);
@@ -51,7 +52,7 @@ export class Switch {
 
 	setCheckboxChecked(value) {
 		let behavior = value ? "check" : "uncheck"
-		$(this.checkbox).checkbox(behavior);				
+		$(this.checkbox).checkbox(behavior);
 	}
 
 }
